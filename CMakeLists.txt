@@ -23,6 +23,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(crm
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        loginpage.h loginpage.cpp loginpage.ui
+        resources.qrc
+        appstate.h
+        homepage.h homepage.cpp homepage.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET crm APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
