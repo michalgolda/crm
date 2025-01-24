@@ -14,6 +14,10 @@ class HomePage : public QWidget
 public:
     explicit HomePage(QWidget *parent = nullptr);
     ~HomePage();
+    void load();
+
+private slots:
+    void onMenuButtonClicked(int pageIndex);
 
 private:
     Ui::HomePage *ui;

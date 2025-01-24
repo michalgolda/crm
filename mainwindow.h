@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "pageheader.h"
+#include "homepage.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,10 +22,12 @@ public:
 private:
     Ui::MainWindow *ui;
     PageHeader *pageHeader;
+    HomePage *homePage;
 
 private slots:
     void onLoginSuccess();
     void onLogout();
     void onPageHeaderLoad();
+    void onHomePageLoad();
 };
 #endif // MAINWINDOW_H

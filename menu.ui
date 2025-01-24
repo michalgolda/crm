@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Menu</class>
+ <widget class="QWidget" name="Menu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>741</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>741</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="customersListButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Lista klientów</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="transactionManagmentButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Zarządzanie transakcjami</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -3,6 +3,7 @@
 #include "loginpage.h"
 #include "homepage.h"
 #include "pageheader.h"
+#include "appstate.h"
 #include <QDebug>
 #include <QMessageBox>
 
@@ -13,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     QWidget *loginPage = new LoginPage(this);
-    QWidget *homePage = new HomePage(this);
+    homePage = new HomePage(this);
 
     pageHeader = new PageHeader(homePage);
     pageHeader->move(0, 5);
@@ -25,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(loginPage, SIGNAL(loginSuccess()), this, SLOT(onLoginSuccess()));
     connect(loginPage, SIGNAL(loginSuccess()), this, SLOT(onPageHeaderLoad()));
     connect(pageHeader, SIGNAL(logout()), this, SLOT(onLogout()));
+    connect(loginPage, SIGNAL(loginSuccess()), this, SLOT(onHomePageLoad()));
 }
 
 MainWindow::~MainWindow()
@@ -46,4 +48,9 @@ void MainWindow::onLogout()
 void MainWindow::onPageHeaderLoad()
 {
     pageHeader->load();
+}
+
+void MainWindow::onHomePageLoad()
+{
+    homePage->load();
 }

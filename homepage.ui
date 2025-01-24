@@ -13,54 +13,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>110</y>
-     <width>721</width>
-     <height>451</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="menu">
-    <item>
-     <widget class="QPushButton" name="customerListButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Lista klientów</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="transactionManagmentButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Zarządzanie transakcjami</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QWidget" name="pageHeader" native="true">
    <property name="geometry">
     <rect>
@@ -68,6 +20,16 @@
      <y>19</y>
      <width>721</width>
      <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>751</width>
+     <height>471</height>
     </rect>
    </property>
   </widget>
