@@ -5,6 +5,7 @@
 #include "loginpage.h"
 #include "ui_loginpage.h"
 #include "appstate.h"
+#include "pageheader.h"
 
 LoginPage::LoginPage(QWidget *parent)
     : QWidget(parent)

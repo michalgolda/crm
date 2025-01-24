@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "loginpage.h"
 #include "homepage.h"
+#include "pageheader.h"
 #include <QDebug>
 #include <QMessageBox>
 
@@ -14,12 +15,16 @@ MainWindow::MainWindow(QWidget *parent)
     QWidget *loginPage = new LoginPage(this);
     QWidget *homePage = new HomePage(this);
 
+    pageHeader = new PageHeader(homePage);
+    pageHeader->move(0, 5);
+
     ui->stackedWidget->addWidget(loginPage);
     ui->stackedWidget->addWidget(homePage);
     ui->stackedWidget->setCurrentWidget(loginPage);
 
     connect(loginPage, SIGNAL(loginSuccess()), this, SLOT(onLoginSuccess()));
-    connect(homePage, SIGNAL(logout()), this, SLOT(onLogout()));
+    connect(loginPage, SIGNAL(loginSuccess()), this, SLOT(onPageHeaderLoad()));
+    connect(pageHeader, SIGNAL(logout()), this, SLOT(onLogout()));
 }
 
 MainWindow::~MainWindow()
@@ -36,4 +41,9 @@ void MainWindow::onLogout()
 {
     ui->stackedWidget->setCurrentIndex(0);
     QMessageBox::information(this, tr("Informacja"), tr("Zostałeś pomyślnie wylogowany"));
+}
+
+void MainWindow::onPageHeaderLoad()
+{
+    pageHeader->load();
 }
