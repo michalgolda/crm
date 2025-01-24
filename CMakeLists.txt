@@ -27,6 +27,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         resources.qrc
         appstate.h
         homepage.h homepage.cpp homepage.ui
+        appstate.h appstate.cpp
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -2,6 +2,7 @@
 #define HOMEPAGE_H
 
 #include <QWidget>
+#include "appstate.h"
 
 namespace Ui {
 class HomePage;
@@ -17,6 +18,10 @@ public:
 
 private:
     Ui::HomePage *ui;
+    void handleLogout();
+
+signals:
+    void logout();
 };
 
 #endif // HOMEPAGE_H

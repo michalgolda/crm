@@ -6,7 +6,7 @@
 #include "ui_loginpage.h"
 #include "appstate.h"
 
-LoginPage::LoginPage(QStackedWidget *stackedWidget, QWidget *parent)
+LoginPage::LoginPage(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::LoginPage)
 {
@@ -28,6 +28,7 @@ void LoginPage::handleSubmit()
     if (usernameText.isEmpty() || passwordText.isEmpty())
     {
         QMessageBox::information(this, tr("Informacja"), tr("Wypełnij wymagane pola"));
+        return;
     }
 
     // Wczytanie danych dostępu z pliku
@@ -48,11 +49,9 @@ void LoginPage::handleSubmit()
     if (usernameText != storedUsername || passwordText != storedPassword)
     {
         QMessageBox::information(this, tr("Informacja"), tr("Nieprawidłowa nazwa użytkownika lub hasło"));
+        return;
     }
 
-    AppState::instance().isLoggedIn = true;
-    AppState::instance().username = storedUsername;
+    AppState::instance().set("currentUser", storedUsername);
     emit loginSuccess();
-
-    qDebug() << AppState::instance().username;
 }

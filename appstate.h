@@ -2,22 +2,25 @@
 #define APPSTATE_H
 
 #include <QString>
+#include <QMap>
+#include <QVariant>
 
-class AppState {
+class AppState
+{
 public:
-    static AppState& instance() {
-        static AppState instance;
-        return instance;
-    }
+    static AppState& instance(); // Singleton
 
-    bool isLoggedIn = false;
-    QString username = QString();
-
-    AppState(const AppState&) = delete;
-    AppState& operator=(const AppState&) = delete;
+    void set(const QString& key, const QVariant& value);
+    QVariant get(const QString& key) const;
 
 private:
-    AppState() {}
+    AppState() = default; // Prywatny konstruktor
+    ~AppState() = default; // Prywatny destruktor
+
+    AppState(const AppState&) = delete;            // Usunięcie kopiowania
+    AppState& operator=(const AppState&) = delete; // Usunięcie przypisania
+
+    QMap<QString, QVariant> state;
 };
 
 #endif // APPSTATE_H

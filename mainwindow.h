@@ -22,5 +22,6 @@ private:
 
 private slots:
     void onLoginSuccess();
+    void onLogout();
 };
 #endif // MAINWINDOW_H
