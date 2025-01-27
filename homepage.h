@@ -18,6 +18,7 @@ public:
 
 private slots:
     void onMenuButtonClicked(int pageIndex);
+    void onBack();
 
 private:
     Ui::HomePage *ui;

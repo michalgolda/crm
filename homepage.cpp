@@ -24,6 +24,8 @@ HomePage::HomePage(QWidget *parent)
 
 
     connect(menu, SIGNAL(menuButtonClicked(int)), this, SLOT(onMenuButtonClicked(int)));
+    connect(customerList, SIGNAL(back()), this, SLOT(onBack()));
+    connect(transactionManagment, SIGNAL(back()), this, SLOT(onBack()));
 }
 
 HomePage::~HomePage()
@@ -37,6 +39,11 @@ void HomePage::onMenuButtonClicked(int pageIndex)
 }
 
 void HomePage::load()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void HomePage::onBack()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }

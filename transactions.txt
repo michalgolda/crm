@@ -1,0 +1,4 @@
+12345;2025-01-20;250.75 PLN;Jan Kowalski;Sprzedaż;Zrealizowana;Zakup hurtowy;Anna Nowak;Przelew;2025-01-27;FV-2025-00001
+12346;2025-01-22;150.00 PLN;Maria Wiśniewska;Zwrot;Anulowana;Zwrot uszkodzonego produktu;Tomasz Nowak;Gotówka;-;FV-2025-00002
+12347;2025-01-23;500.00 PLN;Piotr Zalewski;Sprzedaż;Zrealizowana;Dostawa ekspresowa;Anna Nowak;Karta kredytowa;2025-01-30;FV-2025-00003
+12348;2025-01-25;100.00 PLN;Katarzyna Kwiatkowska;Zakup;Oczekuje;Promocja sezonowa;Tomasz Nowak;Przelew;2025-02-01;FV-2025-00004

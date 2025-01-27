@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>credentials.txt</file>
+        <file>customers.txt</file>
+        <file>transactions.txt</file>
     </qresource>
 </RCC>
